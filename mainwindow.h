@@ -12,6 +12,7 @@ const int KING_STANDARD = 290;
 const int QUEEN_ATRIUM = 325;
 const int QUEEN_STANDARD= 284;
 const double PARKING = 12.75;
+const int RESORT_FEE = 15;
 
 
 class MainWindow : public QMainWindow
@@ -56,6 +57,10 @@ private slots:
     void on_exitButton_clicked();
 
     void on_nameTxt_textChanged();
+
+    void on_backButton_clicked();
+
+    void on_payButton_clicked();
 
 private:
     Ui::MainWindow *ui;
