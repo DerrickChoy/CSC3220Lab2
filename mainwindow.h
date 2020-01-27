@@ -39,6 +39,10 @@ private slots:
 
     void on_numDays_valueChanged(int arg1);
 
+    void on_nextBtn_clicked();
+
+    void on_numAdultsBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

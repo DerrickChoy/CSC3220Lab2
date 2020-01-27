@@ -269,16 +269,6 @@
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actiondkjkd">
-   <property name="text">
-    <string>dkjkd</string>
-   </property>
-  </action>
-  <action name="actionhereh">
-   <property name="text">
-    <string>hereh</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

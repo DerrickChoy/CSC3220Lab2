@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
@@ -29,17 +30,12 @@ void MainWindow::calculate(){
 
 void MainWindow::nextBtn(){
     bool goNext = true;
-    if(!ui->kingBtn->isChecked() && !ui->queenBtn->isChecked()){
-        goNext = false;
-    }else if(!ui->atriumBtn->isChecked() && !ui->standardBtn->isChecked()){
-        goNext = false;
-    }else if(!ui->parkingBtn->isChecked()){
+    if((!ui->kingBtn->isChecked() && !ui->queenBtn->isChecked()) || (!ui->atriumBtn->isChecked() && !ui->standardBtn->isChecked())){
         goNext = false;
     }else if(ui->numAdultsBox->value() == 0){
         goNext = false;
     }
     ui->nextBtn->setDisabled(!goNext);
-
 }
 
 MainWindow::~MainWindow(){
@@ -68,4 +64,28 @@ void MainWindow::on_parkingBtn_clicked(){
 
 void MainWindow::on_numDays_valueChanged(int arg1){
     calculate();
+}
+
+void MainWindow::on_numAdultsBox_valueChanged(int arg1){
+    calculate();
+}
+
+void MainWindow::on_nextBtn_clicked(){
+    bool goNext = true;
+    if((!ui->kingBtn->isChecked() && !ui->queenBtn->isChecked()) || (!ui->atriumBtn->isChecked() && !ui->standardBtn->isChecked())){
+        goNext = false;
+    }else if(ui->numAdultsBox->value() == 0){
+        goNext = false;
+    }
+    int max = 4;
+    if(ui->kingBtn->isChecked()) max = 3;
+    int numPeople = ui->numChildBox->value() + ui->numAdultsBox->value();
+    if(numPeople > max){
+        QMessageBox errorMsg;
+        QString msg = "You have too many people (max is " +  QString::number(max) + ").";
+        errorMsg.setText(msg);
+        errorMsg.exec();
+    }else if(goNext){
+        ui->stackedWidget->setCurrentIndex(1);
+    }
 }
