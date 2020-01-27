@@ -15,20 +15,27 @@ void MainWindow::calculate(){
     double cost = 0;
     if(ui->kingBtn->isChecked() && ui->atriumBtn->isChecked()){
         cost += KING_ATRIUM;
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_ATRIUM,'f',2));
     }else if(ui->queenBtn->isChecked() && ui->atriumBtn->isChecked()){
         cost += QUEEN_ATRIUM;
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_ATRIUM,'f',2));
     }else if(ui->kingBtn->isChecked() && ui->standardBtn->isChecked()){
         cost += KING_STANDARD;
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_STANDARD,'f',2));
     }else if(ui->queenBtn->isChecked() && ui->standardBtn->isChecked()){
         cost += QUEEN_STANDARD;
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_STANDARD,'f',2));
     }
     if(ui->parkingBtn->isChecked()){
-        cost += 12.75;
+        cost += PARKING;
+        ui->parkingCostLabel->setText("Parking Cost: $" + QString::number(PARKING*ui->numDays->value(),'f',2));
     }
     cost *= ui->numDays->value();
-    ui->costLbl->setText("Price: " + QString::number(cost));
+    ui->costLbl->setText("Price: $" + QString::number(cost,'f',2));
+    ui->taxCostLabel->setText("Tax Cost: $" + QString::number(cost*.15,'f',2));
+    ui->totalCostLabel->setText("Total Cost: $"+ QString::number(cost*1.15,'f',2));
+    ui->resortFeeCostLabel->setText("Resort Fee Cost: $" +QString::number(RESORT_FEE*ui->numDays->value(),'f',2));
 }
-
 void MainWindow::nextBtn(){
     bool goNext = true;
     if((!ui->kingBtn->isChecked() && !ui->queenBtn->isChecked()) || (!ui->atriumBtn->isChecked() && !ui->standardBtn->isChecked())){
@@ -41,7 +48,7 @@ void MainWindow::nextBtn(){
 
 void MainWindow::cardInput(){
     if(ui->americanExpressRadioButton->isChecked())
-        ui->creditCardLineEdit->setInputMask("3999-999999-99999:0");
+        ui->creditCardLineEdit->setInputMask("3999-999999-99999;0");
     else if(ui->visaRadioButton->isChecked())
         ui->creditCardLineEdit->setInputMask("4999-9999-9999-9999;0");
     else if(ui->masterCardRadioButton->isChecked())
@@ -120,4 +127,18 @@ void MainWindow::on_nextBtn_clicked(){
     }else if(goNext){
         ui->stackedWidget->setCurrentIndex(1);
     }
+}
+
+void MainWindow::on_backButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_payButton_clicked()
+{
+    QMessageBox payMessage;
+    QString payText = "Your transaction has been finalized!";
+    payMessage.setText(payText);
+    payMessage.exec();
+    ui->stackedWidget->setCurrentIndex(2);
 }
