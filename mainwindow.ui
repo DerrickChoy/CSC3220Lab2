@@ -17,8 +17,8 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>30</y>
+      <x>40</x>
+      <y>20</y>
       <width>731</width>
       <height>561</height>
      </rect>
@@ -43,8 +43,8 @@
      <widget class="QLabel" name="nameLbl">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>80</y>
+        <x>20</x>
+        <y>110</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -192,8 +192,8 @@
      <widget class="QCheckBox" name="parkingBtn">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>380</y>
+        <x>190</x>
+        <y>390</y>
         <width>86</width>
         <height>20</height>
        </rect>
@@ -257,11 +257,67 @@
      <widget class="QPlainTextEdit" name="nameTxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>80</y>
+        <x>120</x>
+        <y>110</y>
         <width>201</width>
         <height>31</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Customer Information</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>&gt; Payment Method &gt; Confirmation</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>28</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Color: rgb(255,0,0);</string>
+      </property>
+      <property name="text">
+       <string>Customer Information</string>
       </property>
      </widget>
     </widget>
@@ -269,8 +325,8 @@
      <widget class="QLabel" name="totalCostLabel">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>230</y>
+        <x>0</x>
+        <y>320</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -282,8 +338,8 @@
      <widget class="QLabel" name="roomCostLabel">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
+        <x>0</x>
+        <y>120</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -295,8 +351,8 @@
      <widget class="QLabel" name="taxCostLabel">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>70</y>
+        <x>0</x>
+        <y>170</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -308,8 +364,8 @@
      <widget class="QLabel" name="parkingCostLabel">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>120</y>
+        <x>0</x>
+        <y>220</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -322,7 +378,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>170</y>
+        <y>270</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -334,47 +390,47 @@
      <widget class="QRadioButton" name="visaRadioButton">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>320</y>
+        <x>350</x>
+        <y>130</y>
         <width>97</width>
         <height>20</height>
        </rect>
       </property>
       <property name="text">
-       <string>visa</string>
+       <string>Visa</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="masterCardRadioButton">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>320</y>
+        <x>420</x>
+        <y>130</y>
         <width>97</width>
         <height>20</height>
        </rect>
       </property>
       <property name="text">
-       <string>mastercard</string>
+       <string>Mastercard</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="discoverRadioButton">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>320</y>
+        <x>510</x>
+        <y>130</y>
         <width>97</width>
         <height>20</height>
        </rect>
       </property>
       <property name="text">
-       <string>discover</string>
+       <string>Discover</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="americanExpressRadioButton">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>320</y>
+        <x>590</x>
+        <y>130</y>
         <width>131</width>
         <height>20</height>
        </rect>
@@ -386,8 +442,8 @@
      <widget class="QLineEdit" name="creditCardLineEdit">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>360</y>
+        <x>460</x>
+        <y>180</y>
         <width>221</width>
         <height>22</height>
        </rect>
@@ -397,7 +453,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>510</y>
+        <y>430</y>
         <width>113</width>
         <height>32</height>
        </rect>
@@ -409,9 +465,9 @@
      <widget class="QDateEdit" name="cardExperationDate">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>350</y>
-        <width>131</width>
+        <x>460</x>
+        <y>280</y>
+        <width>101</width>
         <height>31</height>
        </rect>
       </property>
@@ -419,9 +475,9 @@
      <widget class="QLabel" name="cardExperationDateLabel">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>360</y>
-        <width>111</width>
+        <x>350</x>
+        <y>290</y>
+        <width>81</width>
         <height>16</height>
        </rect>
       </property>
@@ -433,13 +489,159 @@
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>520</y>
+        <y>420</y>
         <width>113</width>
         <height>32</height>
        </rect>
       </property>
       <property name="text">
        <string>Pay</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>180</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Credit card number:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Payment Summary</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>80</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Card Information</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>230</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name on card:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="creditCardLineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>230</y>
+        <width>221</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>340</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Security Code:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="creditCardLineEdit_8">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>340</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(170,175,180);</string>
+      </property>
+      <property name="text">
+       <string>XXX</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Customer Information &gt;                &gt; Confirmation</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>124</x>
+        <y>28</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Color: rgb(255,0,0);</string>
+      </property>
+      <property name="text">
+       <string>Payment</string>
       </property>
      </widget>
     </widget>
@@ -607,7 +809,8 @@
        </font>
       </property>
       <property name="text">
-       <string>Thank you for purchasing from KEVININC!</string>
+       <string>Thank you for purchasing
+ from KEVININC!</string>
       </property>
      </widget>
      <widget class="QPushButton" name="exitButton">
@@ -621,6 +824,26 @@
       </property>
       <property name="text">
        <string>Done</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Customer Information &gt;                &gt; Confirmation</string>
       </property>
      </widget>
     </widget>
