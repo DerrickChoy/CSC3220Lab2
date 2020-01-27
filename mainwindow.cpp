@@ -75,6 +75,7 @@ void MainWindow::on_parkingBtn_clicked(){
 }
 
 void MainWindow::on_numDays_valueChanged(int arg1){
+    ui->numNightsLbl->setText("Number of Nights: " + QString::number(arg1));
     calculate();
 }
 
@@ -99,6 +100,7 @@ void MainWindow::on_americanExpressRadioButton_clicked()
 }
 
 void MainWindow::on_numAdultsBox_valueChanged(int arg1){
+    ui->numAdultsLbl_2->setText("Number of Adults: " + QString::number(arg1));
     calculate();
 }
 
@@ -120,4 +122,19 @@ void MainWindow::on_nextBtn_clicked(){
     }else if(goNext){
         ui->stackedWidget->setCurrentIndex(1);
     }
+    ui->firstDayLbl->setText("First Day: " + ui->dateInput->text());
+    if(ui->parkingBtn->isChecked()){
+        ui->ParkingLbl->setText("Parking: YES");
+    }else{
+        ui->ParkingLbl->setText("Parking: NO");
+    }
+}
+
+void MainWindow::on_exitButton_clicked(){
+    QApplication::quit();
+}
+
+void MainWindow::on_nameTxt_textChanged(){
+    QString name = ui->nameTxt->toPlainText();
+    ui->thankYouLbl->setText("Thank you " + name + " for purchasing from KEVININC!");
 }

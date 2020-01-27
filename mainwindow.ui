@@ -17,14 +17,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>20</y>
+      <x>50</x>
+      <y>30</y>
       <width>731</width>
       <height>561</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page1">
      <widget class="QPushButton" name="nextBtn">
@@ -38,16 +38,6 @@
       </property>
       <property name="text">
        <string>Next</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="nameTxt">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>80</y>
-        <width>141</width>
-        <height>31</height>
-       </rect>
       </property>
      </widget>
      <widget class="QLabel" name="nameLbl">
@@ -264,6 +254,16 @@
        <string>Num Days:</string>
       </property>
      </widget>
+     <widget class="QPlainTextEdit" name="nameTxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page2">
      <widget class="QLabel" name="totalCostLabel">
@@ -391,6 +391,187 @@
         <width>221</width>
         <height>22</height>
        </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="confimationLbl">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>30</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Confimation Page</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reservationLbl">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>140</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reservation Details:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="paymentLbl">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>140</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Payment Details:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="firstDayLbl">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>220</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>First Day:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="numNightsLbl">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>260</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Number of Nights: 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="roomTypeLbl">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>300</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Room Type: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ParkingLbl">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>340</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Parking: No</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="numAdultsLbl_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>380</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Number of Adults: 0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="numChildLbl">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>420</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Number of Children: 0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="amountDueLbl">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>220</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amount Due:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="creditInfoLbl">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>260</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Credit Card Ending in: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="thankYouLbl">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>340</y>
+        <width>391</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Thank you for purchasing from KEVININC!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="exitButton">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>500</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Done</string>
       </property>
      </widget>
     </widget>

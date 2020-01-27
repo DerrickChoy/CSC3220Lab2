@@ -53,6 +53,10 @@ private slots:
 
     void on_numAdultsBox_valueChanged(int arg1);
 
+    void on_exitButton_clicked();
+
+    void on_nameTxt_textChanged();
+
 private:
     Ui::MainWindow *ui;
 };
