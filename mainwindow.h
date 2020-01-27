@@ -27,6 +27,8 @@ private slots:
 
     void nextBtn();
 
+    void cardInput();
+
     void on_queenBtn_clicked();
 
     void on_kingBtn_clicked();
@@ -38,6 +40,14 @@ private slots:
     void on_parkingBtn_clicked();
 
     void on_numDays_valueChanged(int arg1);
+
+    void on_visaRadioButton_clicked();
+
+    void on_masterCardRadioButton_clicked();
+
+    void on_discoverRadioButton_clicked();
+
+    void on_americanExpressRadioButton_clicked();
 
 private:
     Ui::MainWindow *ui;

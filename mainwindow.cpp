@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
     nextBtn();
     calculate();
+    cardInput();
 }
 
 void MainWindow::calculate(){
@@ -42,6 +43,17 @@ void MainWindow::nextBtn(){
 
 }
 
+void MainWindow::cardInput(){
+    if(ui->americanExpressRadioButton->isChecked())
+        ui->creditCardLineEdit->setInputMask("3999-999999-99999:0");
+    else if(ui->visaRadioButton->isChecked())
+        ui->creditCardLineEdit->setInputMask("4999-9999-9999-9999;0");
+    else if(ui->masterCardRadioButton->isChecked())
+        ui->creditCardLineEdit->setInputMask("5999-9999-9999-9999;0");
+    else if(ui->discoverRadioButton->isChecked())
+        ui->creditCardLineEdit->setInputMask("6999-9999-9999-9999;0");
+}
+
 MainWindow::~MainWindow(){
     delete ui;
 }
@@ -68,4 +80,24 @@ void MainWindow::on_parkingBtn_clicked(){
 
 void MainWindow::on_numDays_valueChanged(int arg1){
     calculate();
+}
+
+void MainWindow::on_visaRadioButton_clicked()
+{
+    cardInput();
+}
+
+void MainWindow::on_masterCardRadioButton_clicked()
+{
+    cardInput();
+}
+
+void MainWindow::on_discoverRadioButton_clicked()
+{
+    cardInput();
+}
+
+void MainWindow::on_americanExpressRadioButton_clicked()
+{
+    cardInput();
 }
