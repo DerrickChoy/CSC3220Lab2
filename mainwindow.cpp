@@ -15,26 +15,33 @@ void MainWindow::calculate(){
     double cost = 0;
     if(ui->kingBtn->isChecked() && ui->atriumBtn->isChecked()){
         cost += KING_ATRIUM;
-        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_ATRIUM,'f',2));
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_ATRIUM * ui->numDays->value(),'f',2));
+        ui->roomTypeLbl->setText("Room Type: King Atrium");
     }else if(ui->queenBtn->isChecked() && ui->atriumBtn->isChecked()){
         cost += QUEEN_ATRIUM;
-        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_ATRIUM,'f',2));
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_ATRIUM * ui->numDays->value(),'f',2));
+        ui->roomTypeLbl->setText("Room Type: Queen Atrium");
     }else if(ui->kingBtn->isChecked() && ui->standardBtn->isChecked()){
         cost += KING_STANDARD;
-        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_STANDARD,'f',2));
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(KING_STANDARD * ui->numDays->value(),'f',2));
+        ui->roomTypeLbl->setText("Room Type: King Standard");
     }else if(ui->queenBtn->isChecked() && ui->standardBtn->isChecked()){
         cost += QUEEN_STANDARD;
-        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_STANDARD,'f',2));
+        ui->roomCostLabel->setText("Room Cost: $" + QString::number(QUEEN_STANDARD * ui->numDays->value(),'f',2));
+        ui->roomTypeLbl->setText("Room Type: Queen Standard");
     }
     if(ui->parkingBtn->isChecked()){
         cost += PARKING;
         ui->parkingCostLabel->setText("Parking Cost: $" + QString::number(PARKING*ui->numDays->value(),'f',2));
     }
+    //Second page
     cost *= ui->numDays->value();
     ui->costLbl->setText("Price: $" + QString::number(cost,'f',2));
     ui->taxCostLabel->setText("Tax Cost: $" + QString::number(cost*.15,'f',2));
     ui->totalCostLabel->setText("Total Cost: $"+ QString::number(cost*1.15,'f',2));
     ui->resortFeeCostLabel->setText("Resort Fee Cost: $" +QString::number(RESORT_FEE*ui->numDays->value(),'f',2));
+    //Third page
+    ui->amountDueLbl->setText("Amount due: $" + QString::number(cost*1.15,'f',2));
 }
 void MainWindow::nextBtn(){
     bool goNext = true;
@@ -119,7 +126,10 @@ void MainWindow::on_nextBtn_clicked(){
         goNext = false;
     }
     int max = 4;
-    if(ui->kingBtn->isChecked()) max = 3;
+    if(ui->kingBtn->isChecked()){
+        max = 3;
+
+    }
     int numPeople = ui->numChildBox->value() + ui->numAdultsBox->value();
     if(numPeople > max){
         QMessageBox errorMsg;
@@ -143,7 +153,7 @@ void MainWindow::on_exitButton_clicked(){
 
 void MainWindow::on_nameTxt_textChanged(){
     QString name = ui->nameTxt->toPlainText();
-    ui->thankYouLbl->setText("Thank you " + name + " for purchasing from KEVININC!");
+    ui->thankYouLbl->setText("Thank you " + name + " for \npurchasing from the Lemachoy bois!");
 }
 
 void MainWindow::on_backButton_clicked()
@@ -158,4 +168,9 @@ void MainWindow::on_payButton_clicked()
     payMessage.setText(payText);
     payMessage.exec();
     ui->stackedWidget->setCurrentIndex(2);
+    //Credit card info to next page
+    QString cardDigits = ui->creditCardLineEdit->text();
+    QStringRef subString(&cardDigits,cardDigits.size()-4,4);
+    ui->creditInfoLbl->setText("Credit Card Ending in: " + subString);
+
 }
