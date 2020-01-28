@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
-    <height>659</height>
+    <width>810</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(197, 233, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -20,11 +23,16 @@
       <x>40</x>
       <y>20</y>
       <width>731</width>
-      <height>561</height>
+      <height>471</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Lato</family>
+     </font>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page1">
      <widget class="QPushButton" name="nextBtn">
@@ -36,6 +44,18 @@
         <height>32</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(71, 154, 255);</string>
+      </property>
       <property name="text">
        <string>Next</string>
       </property>
@@ -43,11 +63,17 @@
      <widget class="QLabel" name="nameLbl">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>110</y>
+        <x>10</x>
+        <y>90</y>
         <width>131</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Reservation Name</string>
@@ -56,11 +82,17 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>160</y>
+        <x>6</x>
+        <y>290</y>
         <width>141</width>
         <height>101</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="title">
        <string>Room Size</string>
@@ -74,8 +106,14 @@
          <height>20</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Lato</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>1-King</string>
+        <string>King Room</string>
        </property>
        <property name="checkable">
         <bool>true</bool>
@@ -93,22 +131,42 @@
          <height>20</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Lato</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>2-Queen</string>
+        <string>Queen Room</string>
        </property>
       </widget>
      </widget>
      <widget class="QGroupBox" name="viewBtns">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>160</y>
+        <x>150</x>
+        <y>290</y>
         <width>141</width>
         <height>101</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
       <property name="title">
        <string>View Type</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
       </property>
       <widget class="QRadioButton" name="standardBtn">
        <property name="geometry">
@@ -118,6 +176,12 @@
          <width>100</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lato</family>
+         <pointsize>10</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Standard</string>
@@ -132,6 +196,12 @@
          <height>20</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Lato</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Atrium</string>
        </property>
@@ -140,11 +210,17 @@
      <widget class="QSpinBox" name="numAdultsBox">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>370</y>
+        <x>140</x>
+        <y>220</y>
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="maximum">
        <number>4</number>
@@ -153,11 +229,17 @@
      <widget class="QSpinBox" name="numChildBox">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>410</y>
+        <x>140</x>
+        <y>254</y>
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="maximum">
        <number>3</number>
@@ -166,11 +248,17 @@
      <widget class="QLabel" name="numAdultsLbl">
       <property name="geometry">
        <rect>
-        <x>18</x>
-        <y>370</y>
+        <x>10</x>
+        <y>220</y>
         <width>91</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Adults</string>
@@ -179,11 +267,17 @@
      <widget class="QLabel" name="numChildrenLbl">
       <property name="geometry">
        <rect>
-        <x>18</x>
-        <y>410</y>
+        <x>10</x>
+        <y>254</y>
         <width>101</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Children</string>
@@ -192,11 +286,17 @@
      <widget class="QCheckBox" name="parkingBtn">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>440</y>
+        <x>10</x>
+        <y>400</y>
         <width>86</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Parking</string>
@@ -205,34 +305,52 @@
      <widget class="QLabel" name="costLbl">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>490</y>
-        <width>201</width>
+        <x>580</x>
+        <y>390</y>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>Estimated Cost:</string>
+       <string>Price:</string>
       </property>
      </widget>
      <widget class="QDateEdit" name="dateInput">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>360</y>
+        <x>140</x>
+        <y>136</y>
         <width>131</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QSpinBox" name="numDays">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>400</y>
+        <x>140</x>
+        <y>180</y>
         <width>42</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="minimum">
        <number>1</number>
@@ -244,38 +362,51 @@
      <widget class="QLabel" name="numDaysLbl">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>400</y>
-        <width>101</width>
+        <x>10</x>
+        <y>180</y>
+        <width>121</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>Num Days</string>
+       <string>Length of Stay (nights)</string>
       </property>
      </widget>
      <widget class="QPlainTextEdit" name="nameTxt">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>110</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>201</width>
+        <x>140</x>
+        <y>90</y>
+        <width>181</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>18</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -288,13 +419,14 @@
       <property name="geometry">
        <rect>
         <x>110</x>
-        <y>20</y>
-        <width>461</width>
-        <height>31</height>
+        <y>10</y>
+        <width>181</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="font">
        <font>
+        <family>Lato</family>
         <pointsize>8</pointsize>
         <weight>50</weight>
         <bold>false</bold>
@@ -308,10 +440,15 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>28</y>
+        <y>10</y>
         <width>111</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">Color: rgb(255,0,0);</string>
@@ -323,14 +460,20 @@
      <widget class="QLabel" name="numDaysLbl_2">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>370</y>
-        <width>91</width>
+        <x>10</x>
+        <y>140</y>
+        <width>81</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>Check-In</string>
+       <string>Check-in Date</string>
       </property>
      </widget>
      <widget class="QLabel" name="imgLbl">
@@ -341,6 +484,11 @@
         <width>351</width>
         <height>231</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -357,6 +505,12 @@
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Total cost: </string>
       </property>
@@ -369,6 +523,12 @@
         <width>161</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Room cost:</string>
@@ -383,6 +543,12 @@
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Tax cost:</string>
       </property>
@@ -395,6 +561,12 @@
         <width>161</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Parking cost:</string>
@@ -409,6 +581,12 @@
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Resort fee cost:</string>
       </property>
@@ -422,6 +600,12 @@
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Visa</string>
       </property>
@@ -429,11 +613,17 @@
      <widget class="QRadioButton" name="masterCardRadioButton">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>412</x>
         <y>130</y>
         <width>97</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Mastercard</string>
@@ -442,11 +632,17 @@
      <widget class="QRadioButton" name="discoverRadioButton">
       <property name="geometry">
        <rect>
-        <x>510</x>
+        <x>520</x>
         <y>130</y>
         <width>97</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Discover</string>
@@ -455,11 +651,17 @@
      <widget class="QRadioButton" name="americanExpressRadioButton">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>600</x>
         <y>130</y>
         <width>131</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>American Express</string>
@@ -468,21 +670,38 @@
      <widget class="QLineEdit" name="creditCardLineEdit">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>180</y>
         <width>221</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
      </widget>
      <widget class="QPushButton" name="backButton">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>430</y>
+        <y>420</y>
         <width>113</width>
         <height>32</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(71, 154, 255);</string>
       </property>
       <property name="text">
        <string>Back</string>
@@ -491,11 +710,16 @@
      <widget class="QDateEdit" name="cardExperationDate">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>280</y>
         <width>101</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
       <property name="displayFormat">
        <string>MM/yyyy</string>
@@ -506,9 +730,15 @@
        <rect>
         <x>350</x>
         <y>290</y>
-        <width>81</width>
+        <width>111</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Experation date:</string>
@@ -523,6 +753,18 @@
         <height>32</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(71, 154, 255);</string>
+      </property>
       <property name="text">
        <string>Pay</string>
       </property>
@@ -532,9 +774,15 @@
        <rect>
         <x>350</x>
         <y>180</y>
-        <width>141</width>
+        <width>121</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Credit card number:</string>
@@ -545,13 +793,14 @@
        <rect>
         <x>0</x>
         <y>80</y>
-        <width>161</width>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Lato</family>
+        <pointsize>18</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -565,13 +814,14 @@
        <rect>
         <x>350</x>
         <y>80</y>
-        <width>161</width>
+        <width>221</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Lato</family>
+        <pointsize>18</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -589,6 +839,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Name on card:</string>
       </property>
@@ -596,11 +852,16 @@
      <widget class="QLineEdit" name="creditCardLineEdit_2">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>230</y>
         <width>221</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
      </widget>
      <widget class="QLabel" name="label_14">
@@ -612,6 +873,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Security Code:</string>
       </property>
@@ -619,7 +886,7 @@
      <widget class="QLineEdit" name="creditCardLineEdit_8">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>480</x>
         <y>340</y>
         <width>51</width>
         <height>21</height>
@@ -627,14 +894,15 @@
       </property>
       <property name="font">
        <font>
+        <family>Lato</family>
         <pointsize>8</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(170,175,180);</string>
+       <string notr="true"/>
       </property>
       <property name="text">
-       <string>XXX</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_6">
@@ -648,23 +916,29 @@
       </property>
       <property name="font">
        <font>
+        <family>Lato</family>
         <pointsize>8</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
       </property>
       <property name="text">
-       <string>Customer Information &gt;                &gt; Confirmation</string>
+       <string>Customer Information &gt;                              &gt; Confirmation</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>30</y>
-        <width>47</width>
-        <height>14</height>
+        <x>125</x>
+        <y>29</y>
+        <width>51</width>
+        <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">Color: rgb(255,0,0);</string>
@@ -686,6 +960,7 @@
       </property>
       <property name="font">
        <font>
+        <family>Lato</family>
         <pointsize>18</pointsize>
        </font>
       </property>
@@ -702,6 +977,12 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>First Day:</string>
       </property>
@@ -714,6 +995,12 @@
         <width>151</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Number of Nights: 1</string>
@@ -728,6 +1015,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Room Type: </string>
       </property>
@@ -740,6 +1033,12 @@
         <width>151</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Parking: No</string>
@@ -754,6 +1053,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Number of Adults: 0</string>
       </property>
@@ -766,6 +1071,12 @@
         <width>151</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Number of Children: 0</string>
@@ -780,6 +1091,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Amount Due:</string>
       </property>
@@ -793,6 +1110,12 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Credit Card Ending in: </string>
       </property>
@@ -801,19 +1124,21 @@
       <property name="geometry">
        <rect>
         <x>350</x>
-        <y>250</y>
-        <width>391</width>
-        <height>141</height>
+        <y>240</y>
+        <width>371</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <family>Lato</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
-       <string>Thank you for purchasing
-from LEMACHOY</string>
+       <string>Thank you for your order</string>
       </property>
      </widget>
      <widget class="QPushButton" name="exitButton">
@@ -824,6 +1149,18 @@ from LEMACHOY</string>
         <width>113</width>
         <height>32</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(71, 154, 255);</string>
       </property>
       <property name="text">
        <string>Done</string>
@@ -840,6 +1177,7 @@ from LEMACHOY</string>
       </property>
       <property name="font">
        <font>
+        <family>Lato</family>
         <pointsize>8</pointsize>
         <weight>50</weight>
         <bold>false</bold>
@@ -852,11 +1190,16 @@ from LEMACHOY</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>30</y>
+        <x>180</x>
+        <y>27</y>
         <width>91</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lato</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">Color: rgb(255,0,0);</string>
@@ -870,13 +1213,14 @@ from LEMACHOY</string>
        <rect>
         <x>0</x>
         <y>120</y>
-        <width>181</width>
+        <width>221</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Lato</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -896,13 +1240,34 @@ from LEMACHOY</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>13</pointsize>
+        <family>Lato</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
       <property name="text">
        <string>Payment Details</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>310</y>
+        <width>381</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Your order number is US-K-6043958. 
+If you have any questions about your order please do contact customer care.
+We hope you enjoy your visit!</string>
       </property>
      </widget>
     </widget>
