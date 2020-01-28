@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
@@ -8,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     nextBtn();
     calculate();
     cardInput();
+    loadImage();
 }
 
 void MainWindow::calculate(){
@@ -69,18 +71,38 @@ MainWindow::~MainWindow(){
 }
 
 void MainWindow::on_queenBtn_clicked(){
+    QString queenFilename = ":/images/queen.jpeg";
+    if(queenImg.load(queenFilename)){
+        queenImg = queenImg.scaled(ui->imgLbl->size(), Qt::KeepAspectRatioByExpanding);
+    }
+    ui->imgLbl->setPixmap(queenImg);
     calculate();
 }
 
 void MainWindow::on_kingBtn_clicked(){
+    QString kingFilename = ":/images/king.jpeg";
+    if(kingImg.load(kingFilename)){
+        kingImg = kingImg.scaled(ui->imgLbl->size(), Qt::KeepAspectRatioByExpanding);
+    }
+    ui->imgLbl->setPixmap(kingImg);
     calculate();
 }
 
 void MainWindow::on_atriumBtn_clicked(){
+    QString atriumFilename = ":/images/atrium.jpg";
+    if(atriumImg.load(atriumFilename)){
+        atriumImg = atriumImg.scaled(ui->imgLbl->size(), Qt::KeepAspectRatioByExpanding);
+    }
+    ui->imgLbl->setPixmap(atriumImg);
     calculate();
 }
 
 void MainWindow::on_standardBtn_clicked(){
+    QString standardFilename = ":/images/standard.jpg";
+    if(standardImg.load(standardFilename)){
+        standardImg = standardImg.scaled(ui->imgLbl->size(), Qt::KeepAspectRatioByExpanding);
+    }
+    ui->imgLbl->setPixmap(standardImg);
     calculate();
 }
 
@@ -93,23 +115,19 @@ void MainWindow::on_numDays_valueChanged(int arg1){
     calculate();
 }
 
-void MainWindow::on_visaRadioButton_clicked()
-{
+void MainWindow::on_visaRadioButton_clicked(){
     cardInput();
 }
 
-void MainWindow::on_masterCardRadioButton_clicked()
-{
+void MainWindow::on_masterCardRadioButton_clicked(){
     cardInput();
 }
 
-void MainWindow::on_discoverRadioButton_clicked()
-{
+void MainWindow::on_discoverRadioButton_clicked(){
     cardInput();
 }
 
-void MainWindow::on_americanExpressRadioButton_clicked()
-{
+void MainWindow::on_americanExpressRadioButton_clicked(){
     cardInput();
 }
 
@@ -156,13 +174,11 @@ void MainWindow::on_nameTxt_textChanged(){
     ui->thankYouLbl->setText("Thank you " + name + " for \npurchasing from the Lemachoy bois!");
 }
 
-void MainWindow::on_backButton_clicked()
-{
+void MainWindow::on_backButton_clicked(){
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void MainWindow::on_payButton_clicked()
-{
+void MainWindow::on_payButton_clicked(){
     QMessageBox payMessage;
     QString payText = "Your transaction has been finalized!";
     payMessage.setText(payText);
@@ -172,5 +188,13 @@ void MainWindow::on_payButton_clicked()
     QString cardDigits = ui->creditCardLineEdit->text();
     QStringRef subString(&cardDigits,cardDigits.size()-4,4);
     ui->creditInfoLbl->setText("Credit Card Ending in: " + subString);
+}
 
+
+void MainWindow::loadImage(){
+    QString queenFilename = ":/images/queen.jpeg";
+    if(queenImg.load(queenFilename)){
+        queenImg = queenImg.scaled(ui->imgLbl->size(), Qt::KeepAspectRatioByExpanding);
+    }
+    ui->imgLbl->setPixmap(queenImg);
 }

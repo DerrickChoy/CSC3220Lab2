@@ -62,7 +62,16 @@ private slots:
 
     void on_payButton_clicked();
 
+
+
 private:
     Ui::MainWindow *ui;
+
+    QPixmap queenImg;
+    QPixmap kingImg;
+    QPixmap atriumImg;
+    QPixmap standardImg;
+
+    void loadImage();
 };
 #endif // MAINWINDOW_H
